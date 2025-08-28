@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Dungeon Master Resource Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="top">
+        <h1>Ultimate Dungeon Master Resource Hub</h1>
+        <p>Your one-stop resource for running epic D&D campaigns</p>
+    </header>
+    <nav>
+        <a href="#" data-tab="home" class="tab-link active">Home</a>
+        <a href="#" data-tab="campaign" class="tab-link">Campaign Planning</a>
+        <a href="#" data-tab="encounters" class="tab-link">Encounters</a>
+        <a href="#" data-tab="npcs" class="tab-link">NPCs</a>
+        <a href="#" data-tab="rules" class="tab-link">Rules Reference</a>
+        <a href="#" data-tab="tools" class="tab-link">Tools & Generators</a>
+        <a href="#" data-tab="community" class="tab-link">Community</a>
+    </nav>
+    <div class="container">
+        <section id="home" class="tab-content active">
+            <h2>Welcome, Dungeon Masters!</h2>
+            <p>This hub provides tools and resources to enhance your D&D campaigns. Use the tabs above to explore campaign planning, encounters, NPCs, rules, generators, and community resources.</p>
+        </section>
+        <section id="campaign" class="tab-content">
+            <h2>Campaign Planning</h2>
+            <p>Plan your D&D campaign with these resources and templates.</p>
+            <h3>Worldbuilding Checklist</h3>
+            <ul>
+                <li><strong>Setting</strong>: Define the world (e.g., high fantasy, grimdark).</li>
+                <li><strong>Factions</strong>: List major groups (e.g., guilds, kingdoms).</li>
+                <li><strong>History</strong>: Create a timeline of key events.</li>
+                <li><strong>Locations</strong>: Describe major cities, dungeons, and landmarks.</li>
+            </ul>
+            <h3>Sample Campaign Hook</h3>
+            <p><em>The Crimson Veil</em>: A mysterious cult is spreading a magical plague. The party must uncover its source before the kingdom falls.</p>
+            <p><a href="https://www.dndbeyond.com/sources" target="_blank">D&D Beyond Campaign Tools</a></p>
+            <div class="back-to-top"><a href="#top">Back to Top</a></div>
+        </section>
+        <section id="encounters" class="tab-content">
+            <h2>Encounter Building</h2>
+            <p>Design balanced and exciting encounters for your party.</p>
+            <h3>Encounter Difficulty Table (5e)</h3>
+            <table>
+                <tr>
+                    <th>Party Level</th>
+                    <th>Easy (XP)</th>
+                    <th>Medium (XP)</th>
+                    <th>Hard (XP)</th>
+                    <th>Deadly (XP)</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>25</td>
+                    <td>50</td>
+                    <td>75</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>75</td>
+                    <td>150</td>
+                    <td>225</td>
+                    <td>400</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>250</td>
+                    <td>500</td>
+                    <td>750</td>
+                    <td>1100</td>
+                </tr>
+            </table>
+            <h3>Random Encounter Generator</h3>
+            <button onclick="generateEncounter()">Generate Encounter</button>
+            <p id="encounter-output">Click the button to generate a random encounter!</p>
+            <p><a href="https://koboldplus.club/#/encounter-builder" target="_blank">Kobold Fight Club</a> for advanced encounter building.</p>
+            <div class="back-to-top"><a href="#top">Back to Top</a></div>
+        </section>
+        <section id="npcs" class="tab-content">
+            <h2>NPCs</h2>
+            <p>Create memorable non-player characters with these tools.</p>
+            <h3>Random NPC Generator</h3>
+            <form>
+                <label for="race">Select Race:</label>
+                <select id="race">
+                    <option value="human">Human</option>
+                    <option value="elf">Elf</option>
+                    <option value="dwarf">Dwarf</option>
+                    <option value="orc">Orc</option>
+                </select>
+                <button type="button" onclick="generateNPC()">Generate NPC</button>
+            </form>
+            <p id="npc-output">Click the button to generate a random NPC!</p>
+            <h3>NPC Template</h3>
+            <p><strong>Name</strong>: [Insert Name]<br>
+               <strong>Role</strong>: [e.g., Shopkeeper, Villain]<br>
+               <strong>Personality</strong>: [e.g., Gruff, Charming]<br>
+               <strong>Goal</strong>: [e.g., Protect village, Gain power]</p>
+            <p><a href="https://donjon.bin.sh/fantasy/name/" target="_blank">Donjon Name Generator</a></p>
+            <div class="back-to-top"><a href="#top">Back to Top</a></div>
+        </section>
+        <section id="rules" class="tab-content">
+            <h2>Rules Reference</h2>
+            <p>Quick reference for D&D 5e rules.</p>
+            <h3>Conditions</h3>
+            <table>
+                <tr>
+                    <th>Condition</th>
+                    <th>Effect</th>
+                </tr>
+                <tr>
+                    <td>Blinded</td>
+                    <td>Attacks have disadvantage; can't see.</td>
+                </tr>
+                <tr>
+                    <td>Paralyzed</td>
+                    <td>Can't act; auto-crit on hits.</td>
+                </tr>
+                <tr>
+                    <td>Stunned</td>
+                    <td>Can't move; attacks have advantage.</td>
+                </tr>
+            </table>
+            <p><a href="https://www.dndbeyond.com/sources/basic-rules" target="_blank">D&D 5e Basic Rules</a></p>
+            <div class="back-to-top"><a href="#top">Back to Top</a></div>
+        </section>
+        <section id="tools" class="tab-content">
+            <h2>Tools & Generators</h2>
+            <p>Use these tools for quick randomization.</p>
+            <h3>Random Loot Generator</h3>
+            <button onclick="generateLoot()">Generate Loot</button>
+            <p id="loot-output">Click the button to generate random loot!</p>
+            <h3>Static Loot Table</h3>
+            <table>
+                <tr>
+                    <th>d10 Roll</th>
+                    <th>Treasure</th>
+                </tr>
+                <tr>
+                    <td>1-3</td>
+                    <td>50 gp</td>
+                </tr>
+                <tr>
+                    <td>4-6</td>
+                    <td>Potion of Healing</td>
+                </tr>
+                <tr>
+                    <td>7-10</td>
+                    <td>Magic Weapon (+1)</td>
+                </tr>
+            </table>
+            <p><a href="https://donjon.bin.sh/5e/random/" target="_blank">Donjon Random Generators</a></p>
+            <div class="back-to-top"><a href="#top">Back to Top</a></div>
+        </section>
+        <section id="community" class="tab-content">
+            <h2>Community Resources</h2>
+            <p>Join the D&D community for inspiration and advice.</p>
+            <ul>
+                <li><a href="https://www.reddit.com/r/DnD" target="_blank">Reddit r/DnD</a></li>
+                <li><a href="https://www.reddit.com/r/DMAcademy" target="_blank">Reddit r/DMAcademy</a></li>
+                <li><a href="https://discord.com/invite/dnd" target="_blank">D&D Discord</a></li>
+            </ul>
+            <div class="back-to-top"><a href="#top">Back to Top</a></div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Ultimate DM Resource Hub | Created for Dungeon Masters everywhere</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
